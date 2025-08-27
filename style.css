@@ -248,6 +248,11 @@ style.css
   user-select: none;
 }
 #aesthetic-clock .rounded-xl {
-  box-shadow: 0 4px 24px 0 rgba(45,212,191,0.10);
+  box-shadow: 0 4px 24px 0 rgba(212, 59, 45, 0.1);
   backdrop-filter: blur(4px);
+}
+
+
+.py-20{
+  text-align: center;
 }
