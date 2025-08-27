@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mobileMenuButton.innerHTML = hamburgerIconSVG; 
     mobileMenuButton.addEventListener('click', (e) => {
-        alert('Button clicked!');
         e.stopPropagation();
         toggleMenu(mobileMenu.classList.contains('hidden'));
     });
