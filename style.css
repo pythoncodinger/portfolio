@@ -7,7 +7,7 @@ body {
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   /* These will be applied by Tailwind, but are here for clarity */
-  background-color: #1b67fd; /* gray-100 */
+  background-color: #f3f4f6; /* gray-100 */
   color: #1f2937; /* gray-800 */
 }
 .font-poppins { font-family: 'Poppins', sans-serif; }
