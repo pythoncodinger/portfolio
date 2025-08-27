@@ -62,9 +62,37 @@ html.dark .tag { background-color: rgba(19, 78, 74, 0.7); color: #99f6e4; }
 .cta-button { background-color: #2dd4bf; color: #ffffff; transition: background-color 0.3s ease; }
 .cta-button:hover { background-color: #14b8a6; }
 
-#mobile-menu { background-color: rgba(0, 0, 0, 0.95); }
-#mobile-menu a { color: #e5e7eb; transition: color 0.3s ease; }
-#mobile-menu a:hover { color: #2dd4bf; }
+#mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.95);
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+#mobile-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Make sure hamburger button is always on top */
+#mobile-menu-button {
+  position: relative;
+  z-index: 50;
+}
+
+/* Optional: Prevent background scroll when menu is open */
+html.overflow-hidden,
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 #to-top-button { background-color: #2dd4bf; color: #ffffff; }
 #to-top-button, #theme-toggle { transition: opacity 0.3s ease, transform 0.3s ease; }
