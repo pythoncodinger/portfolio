@@ -243,3 +243,11 @@ footer a:hover {
   width: fit-content;
 }
 
+style.css
+#aesthetic-clock {
+  user-select: none;
+}
+#aesthetic-clock .rounded-xl {
+  box-shadow: 0 4px 24px 0 rgba(45,212,191,0.10);
+  backdrop-filter: blur(4px);
+}
