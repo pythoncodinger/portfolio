@@ -137,3 +137,7 @@ body.overflow-hidden {
 .mobile-menu-link:focus::after {
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
