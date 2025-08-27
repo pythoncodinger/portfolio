@@ -71,21 +71,30 @@ html.dark .tag { background-color: rgba(19, 78, 74, 0.7); color: #99f6e4; }
   position: fixed;
   inset: 0;
   z-index: 40;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateY(-30px);
   opacity: 1;
   visibility: visible;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
 #mobile-menu.hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: translateY(-60px);
 }
 
 /* Make sure hamburger button is always on top */
 #mobile-menu-button {
   position: relative;
   z-index: 50;
+  transition: transform 0.2s;
+}
+#mobile-menu-button:hover {
+  transform: scale(1.15) rotate(8deg);
 }
 
 /* Optional: Prevent background scroll when menu is open */
@@ -97,3 +106,34 @@ body.overflow-hidden {
 #to-top-button { background-color: #2dd4bf; color: #ffffff; }
 #to-top-button, #theme-toggle { transition: opacity 0.3s ease, transform 0.3s ease; }
 #to-top-button:hover, #theme-toggle:hover { transform: scale(1.1); }
+
+/* --- Mobile Menu Link Hover Animation --- */
+.mobile-menu-link {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.mobile-menu-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2dd4bf;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: #2dd4bf;
+  transform: scale(1.08);
+}
+
+.mobile-menu-link:hover::after,
+.mobile-menu-link:focus::after {
+  width: 100%;
+}
