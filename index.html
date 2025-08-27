@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadath Ali - Full-Stack Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom animation for the button glow effect -->
+    <style>
+        @keyframes tilt {
+            0%, 50%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(0.5deg); }
+            75% { transform: rotate(-0.5deg); }
+        }
+        .animate-tilt {
+            animation: tilt 10s infinite linear;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">SADATH</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -- FIXED: Added text color classes -->
+            <button id="mobile-menu-button" class="md:hidden z-50 text-gray-900 dark:text-white"></button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 flex-col items-center justify-center space-y-8 text-2xl">
+        <a href="#about" class="mobile-menu-link">About</a>
+        <a href="#projects" class="mobile-menu-link">Projects</a>
+        <a href="#skills" class="mobile-menu-link">Skills</a>
+        <a href="#contact" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-start pt-20">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter">
+                MOHAMMED SADATH ALI.
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl lg:text-3xl font-medium font-poppins">
+                I design and build <span class="highlight font-pacifico font-normal text-3xl md:text-4xl">beautiful</span>,
+                <br class="hidden md:block">high-performance web applications.
+            </p>
+            <p class="mt-8 max-w-3xl text-base md:text-lg">
+                Full-stack developer with a passion for blending clean code with beautiful design. Creating user-centric solutions that are both technically robust and visually <span class="highlight font-caveat text-2xl md:text-3xl">stunning</span>.
+            </p>
+            
+            <!-- Updated "Say Hello" Button -->
+            <div class="relative mt-12 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300 animate-tilt"></div>
+                <a href="#contact" class="relative cta-button inline-block font-bold py-3 px-8 rounded-lg">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 lg:py-32">
+            <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+                <div class="w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+                    <img src="https://placehold.co/400x400/111827/ffffff?text=Sadath" alt="A portrait of Mohammed Sadath Ali" class="w-full h-full rounded-full object-cover border-4 shadow-lg">
+                </div>
+                <div class="max-w-xl text-lg leading-relaxed space-y-6 text-center md:text-left">
+                    <p>Hello! I'm Sadath, a full-stack developer based in Hyderabad. My journey into web development started with a fascination for how things work on the internet. Today, I specialize in building dynamic, responsive, and user-friendly web applications from the ground up.</p>
+                    <p>I thrive on turning complex problems into simple, beautiful, and intuitive designs. I love the challenge of finding the perfect balance between functionality and aesthetics.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 lg:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/000000/2dd4bf?text=Project+One" alt="Project One Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Project One</h3>
+                        <p class="mb-4">A brief description of the project, its purpose, and the value it brings. Keep it concise and engaging.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">React</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                 <div class="project-card rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/000000/2dd4bf?text=Project+Two" alt="Project Two Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Project Two</h3>
+                        <p class="mb-4">Another cool project. Explain the technology stack and the problems you solved with this application.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">Vue.js</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">Firebase</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                 <div class="project-card rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/000000/2dd4bf?text=Project+Three" alt="Project Three Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Project Three</h3>
+                        <p class="mb-4">This project showcases skills in UI/UX design and front-end development, focusing on a clean user interface.</p>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">Figma</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <span class="tag text-xs font-medium px-2.5 py-0.5 rounded-full">HTML5/CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 lg:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">My Tech Stack</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">JavaScript (ES6+)</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">React</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">Node.js</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">Python</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">HTML5 & CSS3</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">Tailwind CSS</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">SQL & NoSQL</p></div>
+                <div class="flex flex-col items-center"><p class="text-lg font-semibold mt-2">Git & GitHub</p></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 lg:py-32 text-center">
+            <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+            <p class="max-w-2xl mx-auto text-lg mb-8">
+                I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to say hello, feel free to reach out!
+            </p>
+
+            <!-- Updated "Send me an Email" Button -->
+            <div class="relative inline-block group">
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300 animate-tilt"></div>
+                <a href="mailto:your-email@example.com" class="relative cta-button inline-block font-bold py-4 px-10 rounded-lg text-lg">
+                    Send me an Email
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                <a href="#"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+            </div>
+            <p>&copy; <span id="year"></span> Mohammed Sadath Ali. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 space-y-4">
+        <button id="theme-toggle" class="w-12 h-12 rounded-full flex items-center justify-center shadow-lg"></button>
+        <button id="to-top-button" class="w-12 h-12 rounded-full hidden items-center justify-center shadow-lg"></button>
+    </div>
+
+    <!-- Your Custom JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
